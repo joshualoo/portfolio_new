@@ -1,0 +1,343 @@
+// Importing variables
+@import "./variables.scss";
+
+// Importing Bulma from node_modules
+@import "~bulma/bulma.sass";
+
+///////////////////////
+//*****  Helper classes
+///////////////////////
+
+body {
+	font-family: $p-font;
+	font-size: 16px;
+	color: #333;
+	background: #f9f9f9;
+	background-color: #f9f9f9;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e4d2d2' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	//https://www.heropatterns.com/
+}
+
+//Common styles
+
+h1 {
+	font-family: $h-font;
+	font-size: 3rem;
+	color: #00473e;
+	line-height: 1.5;
+}
+h2 {
+	font-size: 1rem;
+	font-family: $subh-font;
+	line-height: 1.5;
+}
+p {
+	font-size: $p-size;
+	color: #475d5b;
+	line-height: 1.6;
+}
+li {
+	line-height: 1.8;
+}
+.sec-color {
+	color: $sec-color;
+}
+.title {
+	font-size: 2.8rem;
+}
+.subtitle {
+	line-height: 1.5;
+}
+.underline::after {
+	border-bottom: 3px solid;
+}
+.section-title {
+}
+.box-shadow {
+	box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.33);
+	transition: 0.5s ease all;
+	&:hover {
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.about-section,
+	.work-section,
+	.career-section {
+		text-align: center;
+	}
+}
+
+////////////////
+//*****  NavBar
+////////////////
+
+.navbar {
+	background: transparent;
+}
+.navbar-title {
+	font-family: $p-font;
+}
+
+.logo-type {
+	font-size: 1.2rem;
+	font-family: $subh-font;
+	font-weight: 500;
+	// border-bottom: 2px solid #555;
+}
+
+// end Navbar Section
+
+/////////////////////////////
+//*****  Body/Header  Section
+/////////////////////////////
+
+.hero-body {
+	margin-top: 50px;
+	height: 40vh;
+	position: relative;
+	.big-title {
+		font-size: 6.5rem;
+		font-weight: 700;
+		position: relative;
+		width: fit-content;
+		&:after {
+			content: "";
+			position: absolute;
+			border: 10px solid $underline-color;
+			left: 0;
+			bottom: 0;
+			width: 30%;
+			transition: 0.3s ease;
+			width: 325px;
+		}
+		&.active:after {
+			border: 5px solid $underline-color;
+		}
+	}
+}
+.header-title {
+	font-weight: 400;
+	border: 2px dashed #333;
+	box-shadow: 0 0 0 8px #3333;
+}
+
+#there {
+	&:hover .big-title:after {
+		border: 1px solid $underline-color;
+	}
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// end Body/Header Section
+
+/////////////
+//*****  Work
+/////////////
+
+.work {
+	.work-column {
+		padding-bottom: 0;
+	}
+	a {
+		color: unset;
+		&:hover .work-content {
+			box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+			border: 1px solid $underline-color;
+			transform: translate3d(0);
+		}
+		&:hover .work-link:after {
+			opacity: 1;
+			animation: fade-in 0.65s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		}
+	}
+	.work-content {
+		transition: $transition;
+		padding: 15px 10px;
+		border: 1px dotted $underline-color;
+		.content {
+			padding: 15px 5px 15px;
+			.work-link {
+				font-size: 1.33rem;
+				line-height: 1.5;
+				font-weight: 700;
+				color: unset;
+				font-family: $p-font;
+				margin: 0;
+				&:after {
+					content: "explore";
+					margin: -4px 0 0 20px;
+					display: inline-block;
+					font-weight: 100;
+					font-size: 0.85rem;
+					vertical-align: middle;
+					transition: $transition;
+					opacity: 0;
+					border-bottom: 3px solid $underline-color;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.work {
+		a {
+			&:hover .work-link:after {
+				animation: none;
+			}
+		}
+		.work-content {
+			.content {
+				.work-link {
+					span {
+						width: fit-content;
+						border-bottom: 3px solid $underline-color;
+					}
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-4-21 21:56:7
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// end Work section
+
+///////////////
+//*****  Career
+///////////////
+
+.career-columns {
+	margin-top: 15px;
+	.company {
+		font-family: $p-font;
+		margin-bottom: 0;
+		font-size: 1.1rem;
+	}
+}
+
+// end Career section
+
+//////////////////////////////////
+//*****  Single Porfolio Work page
+//////////////////////////////////
+
+.portfolio-img__columns {
+	img {
+		margin-bottom: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.logo-text-columns {
+		text-align: center;
+	}
+	.image-column .image {
+		margin: 25px auto 0;
+		width: 150px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.links-container {
+		padding: 1.5rem;
+	}
+}
+///////////////////////////////////////
+//*****  End- Single Porfolio Work page
+///////////////////////////////////////
+
+////////////////
+//*****  Footer
+////////////////
+
+.footer {
+	display: flex;
+	padding: 1.5rem 1.5rem;
+	line-height: 1.5rem;
+	background: transparent;
+	a {
+		border-bottom: 1px solid;
+		color: black;
+	}
+	a:hover {
+		color: $sec-color;
+	}
+}
+
+// end Footer Section
+
+////////////////
+//*****  Contact
+////////////////
+
+.contact-row {
+	position: fixed;
+	left: -3%;
+	transform: rotate(270deg);
+	bottom: 15%;
+	padding: 1.5rem;
+	.columns {
+		justify-content: center;
+		.column {
+			width: fit-content;
+			padding: 0 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1650px) {
+	.contact-row {
+		position: relative;
+		left: unset;
+		transform: unset;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 768px) {
+	.contact-row {
+		.columns {
+			.column {
+				padding: 5px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// end contact  Section

@@ -1,0 +1,52 @@
+// VARIABLES
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&family=Source+Serif+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Muli:wght@300&family=Space+Mono&family=Work+Sans:ital,wght@0,400;1,300&display=swap");
+
+$bg-color: #fef6e4;
+$sec-color: #800000;
+
+$underline-color: #ccbeb3;
+
+$h-font: "Space Mono", mono-space;
+$subh-font: "Work Sans", sans-serif;
+$p-font: "Lora", serif;
+
+$p-size: 0.95rem;
+
+$transition: 0.2s ease all;
+
+//////////////////////////
+// shared element styles
+//////////////////////////
+
+.link {
+	color: black;
+	font-family: $subh-font;
+	border-bottom: 3px solid $underline-color;
+	transition: $transition;
+	&:hover {
+		border-bottom-color: transparent;
+		background: $underline-color;
+		padding: 2px 0;
+	}
+}
+.underline {
+	color: black;
+	border-bottom: 3px solid $underline-color;
+	transition: $transition;
+	width: fit-content;
+	margin: auto;
+}
+
+.section-divider {
+	height: 2px;
+	background: $underline-color;
+	margin: 50px auto !important;
+}
+.short-line {
+	height: 1px;
+	background: $underline-color;
+	width: 25%;
+	margin-right: auto;
+	margin-left: auto;
+}
